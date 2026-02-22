@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-salon.jpg";
 
 const HeroSection = () => {
@@ -27,18 +28,18 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#services"
+          <Link
+            to="/services"
             className="border-2 border-primary-foreground text-primary-foreground px-8 py-3 text-sm font-semibold uppercase tracking-widest hover:bg-primary-foreground hover:text-foreground transition-all"
           >
             Our Services
-          </a>
-          <a
-            href="#book"
+          </Link>
+          <Link
+            to="/booking"
             className="bg-primary text-primary-foreground px-8 py-3 text-sm font-semibold uppercase tracking-widest hover:bg-primary/90 transition-colors"
           >
             Secure Appointment
-          </a>
+          </Link>
         </div>
       </div>
 

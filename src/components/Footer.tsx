@@ -1,4 +1,5 @@
 import { Instagram, Twitter, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -25,9 +26,15 @@ const Footer = () => {
           <div>
             <h4 className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/60">
-              {["Home", "Services", "About Spark", "Gift Cards", "Privacy Policy"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="hover:text-primary transition-colors">{link}</a>
+              {[
+                { label: "Home", path: "/" },
+                { label: "Services", path: "/services" },
+                { label: "About Spark", path: "/about" },
+                { label: "Gallery", path: "/gallery" },
+                { label: "Contact", path: "/contact" }
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link to={link.path} className="hover:text-primary transition-colors">{link.label}</Link>
                 </li>
               ))}
             </ul>
