@@ -1,14 +1,15 @@
 import { Scissors, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import serviceHair from "@/assets/service-hair.jpg";
 import serviceNails from "@/assets/service-nails.jpg";
 import serviceSkin from "@/assets/service-skin.jpg";
 import serviceMakeup from "@/assets/service-makeup.jpg";
 
 const services = [
-  { title: "Hair", image: serviceHair, icon: Scissors, link: "#" },
-  { title: "Nails", image: serviceNails, icon: Sparkles, link: "#" },
-  { title: "Skin", image: serviceSkin, icon: Sparkles, link: "#" },
-  { title: "Makeup", image: serviceMakeup, icon: Sparkles, link: "#" },
+  { title: "Hair", image: serviceHair, icon: Scissors, link: "/services" },
+  { title: "Nails", image: serviceNails, icon: Sparkles, link: "/services" },
+  { title: "Skin", image: serviceSkin, icon: Sparkles, link: "/services" },
+  { title: "Makeup", image: serviceMakeup, icon: Sparkles, link: "/services" },
 ];
 
 const ServicesSection = () => {
@@ -25,9 +26,9 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
           {services.map((service) => (
-            <a
+            <Link
               key={service.title}
-              href={service.link}
+              to={service.link}
               className="group relative aspect-[3/4] overflow-hidden rounded-sm"
             >
               <img
@@ -46,7 +47,7 @@ const ServicesSection = () => {
                   Explore →
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

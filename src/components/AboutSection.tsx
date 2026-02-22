@@ -1,4 +1,5 @@
 import { CheckCircle, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import aboutImage from "@/assets/about-salon.jpg";
 
 const AboutSection = () => {
@@ -47,12 +48,12 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <a
-              href="#"
+            <Link
+              to="/about"
               className="inline-flex items-center text-sm font-semibold uppercase tracking-widest text-foreground hover:text-primary transition-colors"
             >
               Meet the Team →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
